@@ -102,7 +102,7 @@ $('#btn8').click(function() {
 
   const hour8String = JSON.stringify(hour8);
 
-  localStorage.setItem("text8", $('#text8').val());
+  localStorage.setItem(hour8, $('#text8').val());
 })
 
 $('#btn9').click(function() { 
