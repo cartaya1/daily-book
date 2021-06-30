@@ -31,9 +31,7 @@ $('#btn1').click(function() {
   if($('#text1').val()) {
     localStorage.removeItem('text1');
   }
-
   const hour1String = JSON.stringify(hour1);
-  
   localStorage.setItem(hour1, $('#text1').val());
 });
 
@@ -131,7 +129,7 @@ function colorCoding() {
   
   // Test check: hourNow24 <= 5pm;
 
-  if(hourNow24 >= 9 && hourNow24 <= 17) {
+  if(hourNow24 >= 8 && hourNow24 <= 17) {
 
     for (let i =1; i<=9 ; i++) { 
      let hourInInt = parseInt($('#time'+i).text());
