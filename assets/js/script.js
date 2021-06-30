@@ -1,5 +1,5 @@
 // Declare variables
-let timeNow = moment().format('dddd, MMMM Do YYYY');
+let timeNow = moment().format('hh:mm:ss a');
 let hourNow = moment().format('h');
 let hourNow24= parseInt(moment().format('HH'));
 let hourNowInt = parseInt(hourNow);

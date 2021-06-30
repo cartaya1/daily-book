@@ -16,7 +16,6 @@ body {
   .jumbotron {
     text-align: center;
     background-color: transparent;
-    color: hsla(220, 50%, 50%);
     border-radius: 0;
     border-bottom: 10px solid black;
     font-family: 'Times New Roman', Times, serif
