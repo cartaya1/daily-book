@@ -3,7 +3,7 @@ body {
     font-size: 20px;
     line-height: 1;
   }
-  
+  /*text inside squeare*/
   textarea{
     background: transparent;
     border: none;
@@ -12,7 +12,7 @@ body {
     border-left: 1px solid black;
     padding: 10px;
   }
-  
+  /*HEAD Lines*/
   .jumbotron {
     text-align: center;
     background-color: transparent;

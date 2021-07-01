@@ -129,7 +129,7 @@ function colorCoding() {
   
   // Test check: hourNow24 <= 5pm;
 
-  if(hourNow24 >= 8 && hourNow24 <= 17) {
+  if(hourNow24 >= 9 && hourNow24 <= 17) {
 
     for (let i =1; i<=9 ; i++) { 
      let hourInInt = parseInt($('#time'+i).text());
@@ -157,4 +157,14 @@ function colorCoding() {
     clearInterval(TIMER);
     $('textarea').css('background-color', 'pink');
   }
+  //Try pull information from Local Storage
+  $("#text1 .description").val(localStorage.getItem("text1"));
+  $("#text2 .description").val(localStorage.getItem("text2"));
+  $("#text3 .description").val(localStorage.getItem("text3"));
+  $("#text4 .description").val(localStorage.getItem("text4"));
+  $("#text5 .description").val(localStorage.getItem("text5"));
+  $("#text6 .description").val(localStorage.getItem("text6"));
+  $("#text7 .description").val(localStorage.getItem("text7"));
+  $("#text8 .description").val(localStorage.getItem("text8"));
+  $("#text9 .description").val(localStorage.getItem("text9"));
 }
