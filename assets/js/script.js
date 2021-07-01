@@ -5,25 +5,25 @@ let hourNow24= parseInt(moment().format('HH'));
 let hourNowInt = parseInt(hourNow);
 let Timer;
 
-const hour1 = $('#time1').text();
-const hour2 = $('#time2').text();
-const hour3 = $('#time3').text();
-const hour4 = $('#time4').text();
-const hour5 = $('#time5').text();
-const hour6 = $('#time6').text();
-const hour7 = $('#time7').text();
-const hour8 = $('#time8').text();
-const hour9 = $('#time9').text();
+var hour1 = $('#time1').text();
+var hour2 = $('#time2').text();
+var hour3 = $('#time3').text();
+var hour4 = $('#time4').text();
+var hour5 = $('#time5').text();
+var hour6 = $('#time6').text();
+var hour7 = $('#time7').text();
+var hour8 = $('#time8').text();
+var hour9 = $('#time9').text();
 
-const hour1Int = parseInt(hour1);
-const hour2Int = parseInt(hour2);
-const hour3Int = parseInt(hour3);
-const hour4Int = parseInt(hour4);
-const hour5Int = parseInt(hour5);
-const hour6Int = parseInt(hour6);
-const hour7Int = parseInt(hour7);
-const hour8Int = parseInt(hour8);
-const hour9Int = parseInt(hour9);
+var hour1Int = parseInt(hour1);
+var hour2Int = parseInt(hour2);
+var hour3Int = parseInt(hour3);
+var hour4Int = parseInt(hour4);
+var hour5Int = parseInt(hour5);
+var hour6Int = parseInt(hour6);
+var hour7Int = parseInt(hour7);
+var hour8Int = parseInt(hour8);
+var hour9Int = parseInt(hour9);
 
 // Store user input in local Storage
 
@@ -31,7 +31,7 @@ $('#btn1').click(function() {
   if($('#text1').val()) {
     localStorage.removeItem('text1');
   }
-  const hour1String = JSON.stringify(hour1);
+  var hour1String = JSON.stringify(hour1);
   localStorage.setItem(hour1, $('#text1').val());
 });
 
@@ -40,7 +40,7 @@ $('#btn2').click(function() {
     localStorage.removeItem('text2');
   }
 
-  const hour2String = JSON.stringify(hour2);
+  var hour2String = JSON.stringify(hour2);
 
   localStorage.setItem(hour2, $('#text2').val());
 });
@@ -50,7 +50,7 @@ $('#btn3').click(function() {
     localStorage.removeItem('text3');
   }
 
-  const hour3String = JSON.stringify(hour3);
+  var hour3String = JSON.stringify(hour3);
 
   localStorage.setItem(hour3, $('#text3').val());
 });
@@ -60,7 +60,7 @@ $('#btn4').click(function() {
     localStorage.removeItem('text4');
   }
 
-  const hour4String = JSON.stringify(hour4);
+  var hour4String = JSON.stringify(hour4);
 
   localStorage.setItem(hour4, $('#text4').val());
 });
@@ -70,7 +70,7 @@ $('#btn5').click(function() {
     localStorage.removeItem('text5');
   }
 
-  const hour5String = JSON.stringify(hour5);
+  var hour5String = JSON.stringify(hour5);
 
   localStorage.setItem(hour5, $('#text5').val());
 });
@@ -80,7 +80,7 @@ $('#btn6').click(function() {
     localStorage.removeItem('text6');
   }
 
-  const hour6String = JSON.stringify(hour6);
+  var hour6String = JSON.stringify(hour6);
 
   localStorage.setItem(hour6, $('#text6').val());
 });
@@ -90,7 +90,7 @@ $('#btn7').click(function() {
     localStorage.removeItem('text7');
   }
 
-  const hour7String = JSON.stringify(hour7);
+  var hour7String = JSON.stringify(hour7);
 
   localStorage.setItem(hour7, $('#text7').val());
 })
@@ -100,7 +100,7 @@ $('#btn8').click(function() {
     localStorage.removeItem('text8');
   }
 
-  const hour8String = JSON.stringify(hour8);
+  var hour8String = JSON.stringify(hour8);
 
   localStorage.setItem(hour8, $('#text8').val());
 })
@@ -110,7 +110,7 @@ $('#btn9').click(function() {
     localStorage.removeItem('text9');
   }
 
-  const hour9String = JSON.stringify(hour9);
+  var hour9String = JSON.stringify(hour9);
 
   localStorage.setItem(hour9, $('#text9').val());
 })
@@ -124,16 +124,13 @@ $('#currentDay').append(timeNow);
 colorCoding();
 
 function colorCoding() {
-
   TIMER = setInterval(colorCoding, 1000);
   
   // Test check: hourNow24 <= 5pm;
-
   if(hourNow24 >= 9 && hourNow24 <= 17) {
 
     for (let i =1; i<=9 ; i++) { 
      let hourInInt = parseInt($('#time'+i).text());
-
       if (hourInInt < 9) {
         hourInInt = hourInInt + 12;
       }
@@ -158,13 +155,13 @@ function colorCoding() {
     $('textarea').css('background-color', 'pink');
   }
   //Try pull information from Local Storage
-  $("#text1 .description").val(localStorage.getItem("text1"));
-  $("#text2 .description").val(localStorage.getItem("text2"));
-  $("#text3 .description").val(localStorage.getItem("text3"));
-  $("#text4 .description").val(localStorage.getItem("text4"));
-  $("#text5 .description").val(localStorage.getItem("text5"));
-  $("#text6 .description").val(localStorage.getItem("text6"));
-  $("#text7 .description").val(localStorage.getItem("text7"));
-  $("#text8 .description").val(localStorage.getItem("text8"));
-  $("#text9 .description").val(localStorage.getItem("text9"));
+  $("#text1 .description").val(localStorage.getItem("9 A.M."));
+  $("#text2 .description").val(localStorage.getItem("10 A.M."));
+  $("#text3 .description").val(localStorage.getItem("11 A.M."));
+  $("#text4 .description").val(localStorage.getItem("12 P.M."));
+  $("#text5 .description").val(localStorage.getItem("1 P.M."));
+  $("#text6 .description").val(localStorage.getItem("2 P.M."));
+  $("#text7 .description").val(localStorage.getItem("3 P.M."));
+  $("#text8 .description").val(localStorage.getItem("4 P.M."));
+  $("#text9 .description").val(localStorage.getItem("5 P.M."));
 }
