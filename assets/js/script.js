@@ -1,7 +1,7 @@
 // Declare variables
 let timeNow = moment().format('hh:mm:ss a');
 let hourNow = moment().format('h');
-let hourNow24= parseInt(moment().format('HH'));
+let hourNow24 = parseInt(moment().format('HH'));
 let hourNowInt = parseInt(hourNow);
 let Timer;
 
@@ -26,17 +26,16 @@ var hour8Int = parseInt(hour8);
 var hour9Int = parseInt(hour9);
 
 // Store user input in local Storage
-
-$('#btn1').click(function() {
-  if($('#text1').val()) {
+$('#btn1').click(function () {
+  if ($('#text1').val()) {
     localStorage.removeItem('text1');
   }
   var hour1String = JSON.stringify(hour1);
   localStorage.setItem(hour1, $('#text1').val());
 });
 
-$('#btn2').click(function() {
-  if($('#text2').val()) {
+$('#btn2').click(function () {
+  if ($('#text2').val()) {
     localStorage.removeItem('text2');
   }
 
@@ -45,8 +44,8 @@ $('#btn2').click(function() {
   localStorage.setItem(hour2, $('#text2').val());
 });
 
-$('#btn3').click(function() {
-  if($('#text3').val()) {
+$('#btn3').click(function () {
+  if ($('#text3').val()) {
     localStorage.removeItem('text3');
   }
 
@@ -55,8 +54,8 @@ $('#btn3').click(function() {
   localStorage.setItem(hour3, $('#text3').val());
 });
 
-$('#btn4').click(function() {
-  if($('#text4').val()) {
+$('#btn4').click(function () {
+  if ($('#text4').val()) {
     localStorage.removeItem('text4');
   }
 
@@ -65,8 +64,8 @@ $('#btn4').click(function() {
   localStorage.setItem(hour4, $('#text4').val());
 });
 
-$('#btn5').click(function() {
-  if($('#text5').val()) {
+$('#btn5').click(function () {
+  if ($('#text5').val()) {
     localStorage.removeItem('text5');
   }
 
@@ -75,8 +74,8 @@ $('#btn5').click(function() {
   localStorage.setItem(hour5, $('#text5').val());
 });
 
-$('#btn6').click(function() {
-  if($('#text6').val()) {
+$('#btn6').click(function () {
+  if ($('#text6').val()) {
     localStorage.removeItem('text6');
   }
 
@@ -85,8 +84,8 @@ $('#btn6').click(function() {
   localStorage.setItem(hour6, $('#text6').val());
 });
 
-$('#btn7').click(function() {
-  if($('#text7').val()) {
+$('#btn7').click(function () {
+  if ($('#text7').val()) {
     localStorage.removeItem('text7');
   }
 
@@ -95,8 +94,8 @@ $('#btn7').click(function() {
   localStorage.setItem(hour7, $('#text7').val());
 })
 
-$('#btn8').click(function() {
-  if($('#text8').val()) {
+$('#btn8').click(function () {
+  if ($('#text8').val()) {
     localStorage.removeItem('text8');
   }
 
@@ -105,8 +104,8 @@ $('#btn8').click(function() {
   localStorage.setItem(hour8, $('#text8').val());
 })
 
-$('#btn9').click(function() { 
-  if($('#text9').val()) {
+$('#btn9').click(function () {
+  if ($('#text9').val()) {
     localStorage.removeItem('text9');
   }
 
@@ -125,27 +124,27 @@ colorCoding();
 
 function colorCoding() {
   TIMER = setInterval(colorCoding, 1000);
-  
-  // Test check: hourNow24 <= 5pm;
-  if(hourNow24 >= 9 && hourNow24 <= 17) {
 
-    for (let i =1; i<=9 ; i++) { 
-     let hourInInt = parseInt($('#time'+i).text());
+  // Test check: hourNow24 <= 5pm;
+  if (hourNow24 >= 9 && hourNow24 <= 17) {
+
+    for (let i = 1; i <= 9; i++) {
+      let hourInInt = parseInt($('#time' + i).text());
       if (hourInInt < 9) {
         hourInInt = hourInInt + 12;
       }
       //Check it is now
       if (hourInInt == hourNow24) {
-        $('#text'+i).css('background-color', '#FB8F78');
+        $('#text' + i).css('background-color', '#FB8F78');
         continue;
       }
       //Check it was pass Time
       if (hourInInt < hourNow24) {
-        $('#text'+i).css('background-color', 'lightgray');
-      } 
-// or it is future Time
+        $('#text' + i).css('background-color', 'lightgray');
+      }
+      // or it is future Time
       else {
-        $('#text'+i).css('background-color', 'lightgreen');
+        $('#text' + i).css('background-color', 'lightgreen');
       }
     }
     // it's not in the valid period
